@@ -240,3 +240,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 #disable dual isp sync by default
 PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.camera.dual.isp.sync=0
+
+# system
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.binary_xml=false
