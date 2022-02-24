@@ -27,6 +27,9 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-pa \
     $(LOCAL_PATH)/overlay-system
 
+PRODUCT_PACKAGES += \
+    SDM660Frameworks
+
 # Display Device Config
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/configs/display_id_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_0.xml
