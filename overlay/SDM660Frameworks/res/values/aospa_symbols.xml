@@ -21,15 +21,6 @@
 
     <!-- Key codes of gestures. If the gesture is not supported set it to 0. -->
     <integer name="config_doubleTapKeyCode">143</integer>
-    <integer name="config_drawVKeyCode">753</integer>
-    <integer name="config_drawOKeyCode">751</integer>
-    <integer name="config_drawMKeyCode">750</integer>
-    <integer name="config_drawWKeyCode">754</integer>
-    <integer name="config_drawSKeyCode">752</integer>
-    <integer name="config_oneFingerSwipeUpKeyCode">756</integer>
-    <integer name="config_oneFingerSwipeRightKeyCode">759</integer>
-    <integer name="config_oneFingerSwipeDownKeyCode">757</integer>
-    <integer name="config_oneFingerSwipeLeftKeyCode">758</integer>
 
     <!-- Default settings for gestures
             0 - Disabled
@@ -42,15 +33,6 @@
             7 - Open camera
             8 - Open dialer -->
     <integer name="config_doubleTapDefault">1</integer>
-    <integer name="config_drawVDefault">2</integer>
-    <integer name="config_drawODefault">3</integer>
-    <integer name="config_drawMDefault">4</integer>
-    <integer name="config_drawWDefault">5</integer>
-    <integer name="config_drawSDefault">8</integer>
-    <integer name="config_oneFingerSwipeUpDefault">0</integer>
-    <integer name="config_oneFingerSwipeRightDefault">0</integer>
-    <integer name="config_oneFingerSwipeDownDefault">0</integer>
-    <integer name="config_oneFingerSwipeLeftDefault">0</integer>
 
     <!-- KeyHandler to intercept inputs on screen off. -->
     <bool name="config_enableKeyHandler">true</bool>
