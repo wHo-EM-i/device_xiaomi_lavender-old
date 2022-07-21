@@ -38,9 +38,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 BOOT_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += device/xiaomi/lavender \
-                            hardware/google/interfaces \
-                            hardware/google/pixel
+PRODUCT_SOONG_NAMESPACES += device/xiaomi/lavender
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -334,10 +332,8 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := frameworks/base/config/boot-im
 
 # Power
 PRODUCT_PACKAGES += \
-     android.hardware.power-service.lavender-libperfmgr
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+		 android.hardware.power-service-qti \
+		 power.qcom
 
 # QTI Bluetooth
 -include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
