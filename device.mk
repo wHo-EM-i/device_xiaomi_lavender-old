@@ -335,6 +335,10 @@ PRODUCT_PACKAGES += \
 		 android.hardware.power-service-qti \
 		 power.qcom
 
+# QTI common
+TARGET_COMMON_QTI_COMPONENTS := \
+    perf
+
 # QTI Bluetooth
 -include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-commonsys-intf-board.mk
 -include vendor/qcom/opensource/commonsys-intf/bluetooth/bt-system-opensource-product.mk
