@@ -151,6 +151,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
+TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/power/power-660.c
 
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
