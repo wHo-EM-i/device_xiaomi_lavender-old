@@ -326,6 +326,8 @@ PRODUCT_PACKAGES += \
 		 android.hardware.power-service-qti \
 		 power.qcom
 
+PRODUCT_COPY_FILES += vendor/qcom/opensource/power/config/sdm660/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
 # QTI common
 TARGET_COMMON_QTI_COMPONENTS := \
     av \
