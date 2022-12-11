@@ -28,21 +28,38 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <cstdlib.h>
+#include <vector>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
 #include <android-base/properties.h>
-#include "property_service.h"
-#include "vendor_init.h"
+#include "sys/sysinfo.h"
 
-void property_override(char const prop[], char const value[], bool add = true)
-{
-    auto pi = (prop_info *) __system_property_find(prop);
+using android::base::GetProperty;
 
-    if (pi != nullptr) {
+void property_override(char const prop[], char const value[], bool add = true) {
+    prop_info* pi;
+
+    pi = (prop_info*)__system_property_find(prop);
+    if (pi)
         __system_property_update(pi, value, strlen(value));
-    } else if (add) {
+    else if (add)
         __system_property_add(prop, strlen(prop), value, strlen(value));
+}
+
+void load_rn7s() {
+    property_override("ro.product.model", "Redmi Note 7S");
+}
+
+void load_rn7() {
+    property_override("ro.product.model", "Redmi Note 7");
+}
+
+void vendor_load_properties() {
+    std::string region = GetProperty("ro.boot.hwc", "");
+    if (region.find("India_48_5") != std::string::npos) {
+        load_rn7s();
+    } else {
+        load_rn7();
     }
 }
