@@ -131,7 +131,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.latch_unsignaled=0 \
+    debug.sf.auto_latch_unsignaled=true \
     debug.hwui.renderer=skiagl \
     ro.opengles.version=196610 \
     ro.vendor.display.sensortype=2 \
