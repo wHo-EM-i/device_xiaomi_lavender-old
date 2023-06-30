@@ -9,9 +9,6 @@ include device/xiaomi/sdm660-common/BoardConfigCommon.mk
 
 DEVICE_PATH := device/xiaomi/lavender
 
-# Broken Build
-BUILD_BROKEN_DUP_RULES := true
-
 # Android Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
@@ -42,15 +39,14 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3640619008
 BOARD_VENDORIMAGE_PARTITION_SIZE := 2080305152
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Security patch level
-VENDOR_SECURITY_PATCH := $(PLATFORM_SECURITY_PATCH)
-
-# Vendor init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lavender
-TARGET_RECOVERY_DEVICE_MODULES := libinit_lavender
+VENDOR_SECURITY_PATCH := 2021-06-01
 
 # Inherit the proprietary files
 include vendor/xiaomi/lavender/BoardConfigVendor.mk
