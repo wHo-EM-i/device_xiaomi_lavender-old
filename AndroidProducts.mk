@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_lavender.mk
+    $(LOCAL_DIR)/awaken_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_lavender-user \
-    arrow_lavender-userdebug \
-    arrow_lavender-eng
+    awaken_lavender-user \
+    awaken_lavender-userdebug \
+    awaken_lavender-eng
