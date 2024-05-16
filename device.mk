@@ -89,7 +89,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
     android.hardware.audio.effect@5.0-impl\
     android.hardware.audio.service \
-    audio_amplifier.sdm660 \
     audio.primary.sdm660 \
     audio.r_submix.default \
     audio.usb.default \
@@ -120,13 +119,11 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    libbthost_if \
     audio.bluetooth.default \
     android.hardware.bluetooth.audio-impl \
     libsndmonitor \
     libhdmiedid \
     libhfp \
-    libldacBT_dec \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0 \
     vendor.qti.hardware.btconfigstore@1.0.vendor
@@ -162,7 +159,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.sdm660 \
     libdisplayconfig \
     libqdMetaData \
-    libqdMetaData.vendor \
     vendor.display.config@2.0 \
     vendor.display.config@2.0.vendor
 
@@ -373,10 +369,6 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     fstab.qcom
 
-# Recovery
-PRODUCT_PACKAGES += \
-    librecovery_updater_lavender
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
@@ -442,7 +434,6 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
     hostapd \
     libwifi-hal-qcom \
-    TetheringConfigOverlay \
     libwpa_client \
     WifiOverlay \
     wpa_supplicant \
